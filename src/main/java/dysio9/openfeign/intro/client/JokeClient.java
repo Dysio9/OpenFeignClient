@@ -5,16 +5,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @FeignClient(name = "chuckNorrisJokes",
-        url = "${joke.api.url:http://localhost:8081/getChuckJoke}",
-        configuration = CustomJokeConfig.class)
+    url = "${joke.api.url:http://localhost:8081/getChuckJoke}",
+    configuration = CustomJokeConfig.class)
 public interface JokeClient {
 
-    @GetMapping(path = "/")
-    String getRandomJoke();
+  @GetMapping(path = "/")
+  String getRandomJoke();
 
-    @GetMapping(path = "/")
-    String getRandomJokeWithDelay(@PathVariable int milliseconds);
+  @GetMapping(value = "/sleep/{milliseconds}")
+  String getRandomJokeWithDelay(@PathVariable int milliseconds);
 
-    @GetMapping(path = "/failureProbability")
-    String getRandomJokeWithFailureProbability(int percent);
+  @GetMapping(path = "/failureProbability/{percent}")
+  String getRandomJokeWithFailureProbability(@PathVariable int percent);
 }
