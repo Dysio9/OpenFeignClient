@@ -18,4 +18,11 @@ public class GlobalFeignConfig {
     ErrorDecoder feignErrorDecoder() {
         return new CustomFeignErrorDecoder();
     }
+
+//  @Bean
+//  RequestInterceptor feignRequestInterceptor() {
+//    return requestTemplate -> {
+//      requestTemplate.header("feignInterceptorHeader", "feignCustom");
+//    };
+//  }
 }

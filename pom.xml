@@ -8,15 +8,18 @@
 		<version>2.6.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>dysio9.openfeign.intro</groupId>
 	<artifactId>introduction</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>introduction</name>
 	<description>Demo project for OpenFeign Library on Spring Boot</description>
+
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.0</spring-cloud.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -37,7 +40,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
